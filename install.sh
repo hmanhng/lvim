@@ -406,8 +406,7 @@ function setup_lvim() {
 
   echo "Preparing Packer setup"
 
-  lvim --headless \
-    -c "lua require('lvim.core.log'):set_level([[$LUNARVIM_LOG_LEVEL]])" \
+  lvim \
     -c 'autocmd User PackerComplete quitall' \
     -c 'PackerSync'
 
